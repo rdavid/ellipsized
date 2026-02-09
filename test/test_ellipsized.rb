@@ -143,6 +143,7 @@ class TestEllipsized < Minitest::Test
   end
 
   def test_with_llm_inputs
+    skip if %w[Windows macOS].include?(ENV['RUNNER_OS'])
     RandomPort::Pool::SINGLETON.acquire do |port|
       donce(image: 'ollama/ollama', ports: { port => 11_434 }, root: true, log: Loog::NULL) do
         home = Iri.new("http://localhost:#{port}")
