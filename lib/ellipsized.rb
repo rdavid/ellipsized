@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: Copyright (c) 2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2025-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 # Replaces part of the text with a gap.
 #
 # Author:: Yegor Bugayenko (yegor256@gmail.com)
-# Copyright:: Copyright (c) 2025 Yegor Bugayenko
+# Copyright:: Copyright (c) 2025-2026 Yegor Bugayenko
 # License:: MIT
 class String
   # Truncates a string to specified maximum length, inserting a gap in the middle
