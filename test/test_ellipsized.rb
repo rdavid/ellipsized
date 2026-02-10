@@ -8,6 +8,7 @@ require 'iri'
 require 'json'
 require 'loog'
 require 'net/http'
+require 'os'
 require 'random-port'
 require 'waitutil'
 require_relative '../lib/ellipsized'
@@ -143,6 +144,7 @@ class TestEllipsized < Minitest::Test
   end
 
   def test_with_llm_inputs
+    skip if OS.windows? || OS.mac?
     RandomPort::Pool::SINGLETON.acquire do |port|
       donce(image: 'ollama/ollama', ports: { port => 11_434 }, root: true, log: Loog::NULL) do
         home = Iri.new("http://localhost:#{port}")
