@@ -11,6 +11,7 @@ gem 'iri', '~>0.11', require: false
 gem 'loog', '~>0.6', require: false
 gem 'minitest', '~>6.0', require: false
 gem 'minitest-reporters', '~>1.7', require: false
+gem 'os', '~>1.1', require: false
 gem 'rake', '~>13.2', require: false
 gem 'random-port', '~>0.7', require: false
 gem 'rdoc', '~>7.0', require: false
